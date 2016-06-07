@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Grandet 葛朗台 : A set of python library for QUANTS">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Grandet 葛朗台</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/broodhand/Grandet">View on GitHub</a>
+
+          <h1 id="project_title">Grandet 葛朗台</h1>
+          <h2 id="project_tagline">A set of python library for QUANTS</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/broodhand/Grandet/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/broodhand/Grandet/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a id="grandet是什么" class="anchor" href="#grandet%E6%98%AF%E4%BB%80%E4%B9%88" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Grandet是什么？</h2>
+
+<p>Grandet是一组面向QUANTS的Python工具库</p>
+
+<h2>
+<a id="grandet的历史" class="anchor" href="#grandet%E7%9A%84%E5%8E%86%E5%8F%B2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Grandet的历史</h2>
+
+<ul>
+<li>Grandet前身是由北京正民惠浩投资管理有限公司面向内部开发的量化投资工具库</li>
+<li>由2016年6月6日起，公司开发团队决定将其陆续开源，定名Grandet,转为社区管理</li>
+<li>公司开发团队将积极地通过社区方式继续对项目进行开发和维护</li>
+</ul>
+
+<h2>
+<a id="grandet工具库" class="anchor" href="#grandet%E5%B7%A5%E5%85%B7%E5%BA%93" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Grandet工具库</h2>
+
+<p>Grandet工具库由一系列工具组成，旨在提高QUANTS的工作效率</p>
+
+<ul>
+<li>
+<p>基础工具：</p>
+
+<ul>
+<li>Grandet_base: 由交易日数据api、有效证券代码api等一系列基础api</li>
+</ul>
+</li>
+<li>
+<p>Tick数据工具：</p>
+
+<ul>
+<li>Grandet_tickORM: 高频tick数据ORM，将证券高频tick数据映射为class</li>
+<li>Grandet_DB： tick数据库接口及回调函数，
+可将tick数据固化在elasticsearch、mysql、redis等数据库中</li>
+<li>Grandet_tickToBar： 基于tick数据生成bar数据</li>
+<li>Grandet_barToTick： 基于bar数据模拟tick数据</li>
+</ul>
+</li>
+<li>
+<p>回测及模拟工具：</p>
+
+<ul>
+<li>Grandet_algoTrade: 基于tick数据的策略回测及模拟分析</li>
+</ul>
+</li>
+<li>
+<p>基差交易工具：</p>
+
+<ul>
+<li>Grandet_basisCalcu: 基于tick数据，实时计算basket基差，并将其映射为class</li>
+<li>Grandet_basisPDF: 基于连续tick数据生成basket基差概率密度曲线，
+同时可分层叠加不同分布概率密度函数曲线</li>
+<li>Grandet_basisTrade: 基于不同分布概率密度函数（PDF）模型，实时生成基差交易模型风险数据</li>
+</ul>
+</li>
+<li>
+<p>基于久期的债券交易工具：</p>
+
+<ul>
+<li>Grandet_durationCalcu: 基于tick数据生成债券连续久期（duration）数据</li>
+<li>Grandet_durationCurve: 基于连续久期（duration）数据生成久期曲线，并作回归分析和曲线拟合</li>
+<li>Grandet_durationTrade: 实时扫描市场偏离拟合久期曲线的交易或报价</li>
+</ul>
+</li>
+</ul>
+
+<p>陆续还将开源可转债、分级基金、期权等工具.....</p>
+
+<h2>
+<a id="关于我们" class="anchor" href="#%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>关于我们</h2>
+
+<div class="highlight highlight-source-js"><pre>  <span class="pl-k">var</span> Grandet <span class="pl-k">=</span> {<span class="pl-s"><span class="pl-pds">'</span>project<span class="pl-pds">'</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>Grandet<span class="pl-pds">'</span></span>,
+            <span class="pl-s"><span class="pl-pds">'</span>version<span class="pl-pds">'</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>0.99<span class="pl-pds">'</span></span>,
+            <span class="pl-s"><span class="pl-pds">'</span>author<span class="pl-pds">'</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>SPBG Co.,Ltd. broodhand<span class="pl-pds">'</span></span>,
+            <span class="pl-s"><span class="pl-pds">'</span>contact<span class="pl-pds">'</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>broodhand@spbgcapital.com<span class="pl-pds">'</span></span>,
+            <span class="pl-s"><span class="pl-pds">'</span>site<span class="pl-pds">'</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>http://www.spbgcapital.net<span class="pl-pds">'</span></span>
+            }</pre></div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Grandet 葛朗台 maintained by <a href="https://github.com/broodhand">broodhand</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
